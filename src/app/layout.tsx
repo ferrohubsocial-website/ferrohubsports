@@ -9,11 +9,19 @@ export const metadata: Metadata = {
     default: "FerroHub Sports | Bangalore's Premier Pickleball & Sports Facility",
     template: "%s | FerroHub Sports",
   },
-  description: "World-class pickleball courts, football & cricket turfs at Millers Road, Vasanth Nagar, Bengaluru. Book courts, join tournaments, and be part of Bangalore's fastest-growing sports community.",
-  keywords: ["pickleball", "bangalore", "sports facility", "FerroHub Sports", "pickleball courts", "Millers Road", "Vasanth Nagar", "football turf", "cricket turf"],
+  description: "World-class pickleball courts, football & cricket turfs at Millers Road & Budigere Cross, Bengaluru. Book courts, join tournaments, and be part of Bangalore's fastest-growing sports community.",
+  keywords: ["pickleball", "bangalore", "sports facility", "FerroHub Sports", "pickleball courts", "Millers Road", "Vasanth Nagar", "Budigere Cross", "football turf", "cricket turf"],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "FerroHub Sports | Your Game. Your Space.",
-    description: "Bangalore's premier pickleball & sports facility at Millers Road. World-class courts, epic tournaments, vibrant community.",
+    description: "Bangalore's premier pickleball & sports facility. World-class courts, epic tournaments, vibrant community.",
     url: "https://ferrohubsports.com",
     siteName: "FerroHub Sports",
     locale: "en_IN",

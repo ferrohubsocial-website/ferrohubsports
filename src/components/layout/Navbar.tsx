@@ -8,6 +8,7 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/events", label: "Events" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/business", label: "Business" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,11 +34,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo.svg"
-              alt="FerroHub Sports"
-              className="h-8 md:h-9 w-auto"
-            />
+            <img src="/logo.svg" alt="FerroHub Sports" className="h-8 md:h-9 w-auto" />
           </Link>
 
           {/* Desktop */}
@@ -51,21 +48,16 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href="https://playo.co/venues/bengaluru/ferrohub-sports-millers-road-vasanth-nagar-bengaluru"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/book"
               className="bg-ferro-orange text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-ferro-orange/90 transition-colors"
             >
               Book a Court
-            </a>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden text-ferro-offwhite"
-          >
+          <button onClick={() => setOpen(!open)} className="md:hidden text-ferro-offwhite">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -85,14 +77,13 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href="https://playo.co/venues/bengaluru/ferrohub-sports-millers-road-vasanth-nagar-bengaluru"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/book"
+              onClick={() => setOpen(false)}
               className="block bg-ferro-orange text-white text-center font-bold px-5 py-3 rounded-lg mt-2"
             >
               Book a Court
-            </a>
+            </Link>
           </div>
         </div>
       )}

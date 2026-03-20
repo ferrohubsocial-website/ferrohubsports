@@ -43,6 +43,7 @@ export default function Footer() {
                 { href: "/about", label: "About Us" },
                 { href: "/events", label: "Events" },
                 { href: "/gallery", label: "Gallery" },
+                { href: "/business", label: "Partner With Us" },
                 { href: "/contact", label: "Contact" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="block text-sm text-ferro-slate hover:text-ferro-orange transition-colors">
@@ -85,20 +86,20 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-wider text-ferro-offwhite mb-4">Locations</h4>
             <div className="space-y-4 text-sm text-ferro-slate">
-              <div className="flex items-start gap-2.5">
+              <a href="https://maps.google.com/?q=FerroHub+Sports+Millers+Road+16A+Vasanth+Nagar+Bengaluru+560052" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 hover:text-ferro-orange transition-colors">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-ferro-orange" />
                 <div>
                   <p className="text-ferro-offwhite font-medium">Millers Road</p>
                   <p>16/A, Millers Rd, above Advaith Hyundai, Vasanth Nagar, Bengaluru 560052</p>
                 </div>
-              </div>
-              <div className="flex items-start gap-2.5">
+              </a>
+              <a href="https://maps.google.com/?q=FerroHub+Sports+Budigere+Cross+Survey+No+112+Hoskote+Bengaluru+560049" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 hover:text-ferro-orange transition-colors">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-ferro-orange" />
                 <div>
                   <p className="text-ferro-offwhite font-medium">Budigere Cross</p>
                   <p>Survey No 112 &amp; 114, Budigere Cross, Hoskote, Bidarahalli, Bengaluru 560049</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

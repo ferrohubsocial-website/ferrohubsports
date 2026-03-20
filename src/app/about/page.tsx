@@ -70,18 +70,20 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-10">Find Us Across Bangalore</h2>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="bg-ferro-surface rounded-2xl p-6 border border-white/5">
-              <MapPin size={24} className="text-ferro-orange mx-auto mb-3" />
+            <a href="https://maps.google.com/?q=FerroHub+Sports+Millers+Road+16A+Vasanth+Nagar+Bengaluru+560052" target="_blank" rel="noopener noreferrer" className="bg-ferro-surface rounded-2xl p-6 border border-white/5 hover:border-ferro-orange/30 transition-all hover:scale-[1.02] cursor-pointer group block">
+              <MapPin size={24} className="text-ferro-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="font-heading font-bold text-white text-xl mb-1">Millers Road</h3>
               <p className="text-ferro-slate text-sm mb-3">16/A, Millers Rd, above Advaith Hyundai, Vasanth Nagar, Bengaluru 560052</p>
-              <span className="inline-block bg-ferro-orange/10 text-ferro-orange text-xs font-bold px-3 py-1 rounded-full">Now Open</span>
-            </div>
-            <div className="bg-ferro-surface rounded-2xl p-6 border border-white/5">
-              <MapPin size={24} className="text-ferro-orange mx-auto mb-3" />
+              <span className="inline-block bg-ferro-orange/10 text-ferro-orange text-xs font-bold px-3 py-1 rounded-full mb-2">Now Open</span>
+              <p className="text-ferro-orange/60 text-xs group-hover:text-ferro-orange transition-colors">Tap to open in Google Maps →</p>
+            </a>
+            <a href="https://maps.google.com/?q=FerroHub+Sports+Budigere+Cross+Survey+No+112+Hoskote+Bengaluru+560049" target="_blank" rel="noopener noreferrer" className="bg-ferro-surface rounded-2xl p-6 border border-white/5 hover:border-ferro-orange/30 transition-all hover:scale-[1.02] cursor-pointer group block">
+              <MapPin size={24} className="text-ferro-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="font-heading font-bold text-white text-xl mb-1">Budigere Cross</h3>
               <p className="text-ferro-slate text-sm mb-3">Survey No 112 &amp; 114, Budigere Cross, Hoskote, Bidarahalli, Bengaluru 560049</p>
-              <span className="inline-block bg-ferro-orange/10 text-ferro-orange text-xs font-bold px-3 py-1 rounded-full">Now Open</span>
-            </div>
+              <span className="inline-block bg-ferro-orange/10 text-ferro-orange text-xs font-bold px-3 py-1 rounded-full mb-2">Now Open</span>
+              <p className="text-ferro-orange/60 text-xs group-hover:text-ferro-orange transition-colors">Tap to open in Google Maps →</p>
+            </a>
           </div>
         </div>
       </section>

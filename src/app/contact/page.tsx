@@ -135,23 +135,21 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Actions */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://wa.me/917975749044"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3.5 rounded-lg hover:bg-[#25D366]/90 transition-colors text-sm"
-                >
-                  <MessageCircle size={18} /> WhatsApp Us
-                </a>
-                <a
-                  href="https://playo.co/venues/bengaluru/ferrohub-sports-millers-road-vasanth-nagar-bengaluru"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 bg-ferro-blue text-white font-bold py-3.5 rounded-lg hover:bg-ferro-blue/90 transition-colors text-sm"
-                >
-                  <ExternalLink size={18} /> Book on Playo
-                </a>
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a href="https://wa.me/917975749044" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3.5 rounded-lg hover:bg-[#25D366]/90 transition-colors text-sm">
+                    <MessageCircle size={18} /> WhatsApp Us
+                  </a>
+                  <a href="https://chat.whatsapp.com/KGxxgAr3m112DiSmOsiZ0o?mode=gi_t" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-ferro-surface text-white font-bold py-3.5 rounded-lg border border-white/10 hover:border-ferro-orange/30 transition-colors text-sm">
+                    <ExternalLink size={18} /> Join Community
+                  </a>
+                </div>
+                <p className="text-xs text-ferro-slate uppercase tracking-wider font-bold">Book a Court</p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a href="https://playo.co/venues/bengaluru/ferrohub-sports-millers-road-vasanth-nagar-bengaluru" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-ferro-orange text-white font-bold py-3 rounded-lg hover:bg-ferro-orange/90 transition-colors text-sm">Playo</a>
+                  <a href="https://hudle.in/venues/ferrohub-sports-millers/131566" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-ferro-blue text-white font-bold py-3 rounded-lg hover:bg-ferro-blue/90 transition-colors text-sm">Hudle</a>
+                  <a href="https://link.district.in/DSTRKT/0wke607m" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-ferro-surface text-white font-bold py-3 rounded-lg border border-white/10 hover:border-ferro-orange/30 transition-colors text-sm">District</a>
+                </div>
               </div>
 
               {/* Map */}

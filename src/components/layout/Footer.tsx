@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin, Clock, Users } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,19 +8,31 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Image src="/logo.png" alt="FerroHub Sports" width={150} height={42} className="h-10 w-auto mb-4" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-stacked.svg" alt="FerroHub Sports" className="h-16 w-auto mb-4" />
             <p className="text-ferro-slate text-sm leading-relaxed">
               Bangalore&apos;s premier urban sports facility. World-class pickleball courts, football &amp; cricket turfs.
             </p>
-            <a
-              href="https://www.instagram.com/ferrohubsports/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 text-ferro-slate hover:text-ferro-orange transition-colors"
-            >
-              <Instagram size={20} />
-              <span className="text-sm">@ferrohubsports</span>
-            </a>
+            <div className="flex flex-col gap-2 mt-4">
+              <a
+                href="https://www.instagram.com/ferrohubsports/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-ferro-slate hover:text-ferro-orange transition-colors"
+              >
+                <Instagram size={18} />
+                <span className="text-sm">@ferrohubsports</span>
+              </a>
+              <a
+                href="https://chat.whatsapp.com/KGxxgAr3m112DiSmOsiZ0o?mode=gi_t"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-ferro-slate hover:text-ferro-orange transition-colors"
+              >
+                <Users size={18} />
+                <span className="text-sm">Join Community</span>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -38,14 +49,12 @@ export default function Footer() {
                   {l.label}
                 </Link>
               ))}
-              <a
-                href="https://playo.co/venues/bengaluru/ferrohub-sports-millers-road-vasanth-nagar-bengaluru"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-sm text-ferro-orange hover:text-ferro-orange/80 transition-colors font-medium"
-              >
-                Book on Playo →
-              </a>
+            </div>
+            <h4 className="text-sm font-bold uppercase tracking-wider text-ferro-offwhite mt-6 mb-3">Book a Court</h4>
+            <div className="space-y-2">
+              <a href="https://playo.co/venues/bengaluru/ferrohub-sports-millers-road-vasanth-nagar-bengaluru" target="_blank" rel="noopener noreferrer" className="block text-sm text-ferro-orange hover:text-ferro-orange/80 transition-colors font-medium">Playo →</a>
+              <a href="https://hudle.in/venues/ferrohub-sports-millers/131566" target="_blank" rel="noopener noreferrer" className="block text-sm text-ferro-orange hover:text-ferro-orange/80 transition-colors font-medium">Hudle →</a>
+              <a href="https://link.district.in/DSTRKT/0wke607m" target="_blank" rel="noopener noreferrer" className="block text-sm text-ferro-orange hover:text-ferro-orange/80 transition-colors font-medium">District →</a>
             </div>
           </div>
 
@@ -72,12 +81,24 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Address */}
+          {/* Locations */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-ferro-offwhite mb-4">Location</h4>
-            <div className="flex items-start gap-2.5 text-sm text-ferro-slate">
-              <MapPin size={16} className="mt-0.5 shrink-0" />
-              <p>16/A, Millers Rd, above Advaith Hyundai, Kaverappa Layout, Vasanth Nagar, Bengaluru, Karnataka 560052</p>
+            <h4 className="text-sm font-bold uppercase tracking-wider text-ferro-offwhite mb-4">Locations</h4>
+            <div className="space-y-4 text-sm text-ferro-slate">
+              <div className="flex items-start gap-2.5">
+                <MapPin size={16} className="mt-0.5 shrink-0 text-ferro-orange" />
+                <div>
+                  <p className="text-ferro-offwhite font-medium">Millers Road</p>
+                  <p>16/A, Millers Rd, above Advaith Hyundai, Vasanth Nagar, Bengaluru 560052</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <MapPin size={16} className="mt-0.5 shrink-0 text-ferro-orange" />
+                <div>
+                  <p className="text-ferro-offwhite font-medium">Budigere Cross</p>
+                  <p>Survey No 112 &amp; 114, Budigere Cross, Hoskote, Bidarahalli, Bengaluru 560049</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

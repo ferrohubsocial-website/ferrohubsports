@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #161616;
+  color: #F5F2EB;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #fe6221 0%, #a53c3a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

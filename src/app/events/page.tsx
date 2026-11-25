@@ -2,7 +2,23 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, ArrowUpRight } from "lucide-react";
+
+const featured = {
+  title: "Pilates & Pickleball",
+  partner: "House of Pilates",
+  date: "Sunday, 6th December 2026",
+  time: "11:00 AM onwards",
+  tagline: "You asked us to bring it back, and we did!",
+  paragraphs: [
+    "Pilates, Pickleball, Matcha, good food, curated brand experiences and a whole lot of new connections.",
+    "One morning. Two workouts. Endless good vibes!",
+    "Come for the movement, stay for the people. Whether you're coming with your gang or showing up solo, there's something for everyone!",
+  ],
+  closing: "Less swiping. More serving.",
+  image: "/images/pilates-pickleball.jpg",
+  bookingUrl: "https://www.sweatsocial.club/events/6b01d42ca2171a5c7878185a",
+};
 
 const events = [
   { id: 1, title: "Picklebrawl 3.0", date: "Apr 12, 2026", time: "9:00 AM", category: "Tournament", desc: "The flagship tournament returns. Singles & doubles brackets, cash prizes, and an electric atmosphere.", image: "/images/players-handshake.jpg" },
@@ -32,8 +48,56 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Featured upcoming event */}
+      <section className="pb-16 bg-ferro-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-ferro-surface rounded-3xl border border-ferro-orange/30 p-5 md:p-10"
+          >
+            <a href={featured.bookingUrl} target="_blank" rel="noopener noreferrer" className="block relative aspect-[559/700] w-full max-w-md mx-auto rounded-2xl overflow-hidden group">
+              <Image
+                src={featured.image}
+                alt={`${featured.title} with ${featured.partner} at FerroHub Sports`}
+                fill
+                priority
+                sizes="(min-width: 768px) 450px, 100vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </a>
+            <div>
+              <span className="inline-block bg-ferro-orange text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Upcoming Event</span>
+              <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-white mb-1">{featured.title}</h2>
+              <p className="text-ferro-orange font-semibold mb-5">with {featured.partner}</p>
+              <div className="space-y-2 text-sm text-ferro-offwhite/80 mb-6">
+                <p className="flex items-center gap-2"><Calendar size={16} className="text-ferro-orange" />{featured.date}</p>
+                <p className="flex items-center gap-2"><Clock size={16} className="text-ferro-orange" />{featured.time}</p>
+                <p className="flex items-center gap-2"><MapPin size={16} className="text-ferro-orange" />FerroHub Sports, Millers Road</p>
+              </div>
+              <p className="text-white font-semibold mb-3">{featured.tagline}</p>
+              {featured.paragraphs.map((p) => (
+                <p key={p} className="text-ferro-offwhite/75 mb-3">{p}</p>
+              ))}
+              <p className="text-white font-heading font-bold mt-5 mb-1">The House of Pilates Experience</p>
+              <p className="text-ferro-orange italic mb-7">{featured.closing}</p>
+              <a
+                href={featured.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-ferro-orange text-white font-bold px-7 py-3.5 rounded-lg hover:bg-ferro-orange/90 transition-all hover:scale-105"
+              >
+                Book Now <ArrowUpRight size={18} />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="pb-20 bg-ferro-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-white text-center mb-8">More at FerroHub</h2>
           {/* Filters */}
           <div className="flex flex-wrap gap-2 mb-10 justify-center">
             {categories.map((cat) => (
